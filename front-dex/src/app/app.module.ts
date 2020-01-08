@@ -6,6 +6,7 @@ import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,12 +16,13 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PagesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
