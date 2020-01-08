@@ -7,5 +7,5 @@
 </nav>
 <p>I choose you! Thiccachu!</p>
 <div class="pokemon-list">
-    <div class="pokemon-list--item"><p> {{ pokemon }}</p></div>
+    <div class="pokemon-list--item" *ngFor="let pokemon of pokemons.results"><p> {{ pokemon.name }}</p></div>
 </div>
