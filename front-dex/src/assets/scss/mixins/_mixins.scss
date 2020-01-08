@@ -1,0 +1,31 @@
+@mixin font-face($font-family, $font-size, $font-color, $font-weight: normal, $line-height: normal, $letter-spacing: normal, $font-stretch: normal, $font-style: normal) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    font-stretch: $font-stretch;
+    font-style: $font-style;
+}
+
+@mixin button-default {
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+@mixin input {
+    padding: 5px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+
+}
+
+@mixin checkbox {
+    border: none;
+    outline: none;
+}
