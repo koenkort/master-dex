@@ -15,7 +15,6 @@ input[type=checkbox] {
 }
 
 .checkbox--pokeball {
-
     label:before {
         background-color: $checkbox;
         width: 15px;
@@ -48,5 +47,19 @@ input[type=checkbox] {
 
     input[type=checkbox]:checked + label:before {
         background: url("../src/assets/images/star-yellow.png")
+    }
+}
+
+.input {
+    background-color: $input-background;
+    border:  none;
+    outline: none;
+    color: $input-text;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: $overpass;
+
+    &:focus {
+        color: $input-text-focus;
     }
 }
