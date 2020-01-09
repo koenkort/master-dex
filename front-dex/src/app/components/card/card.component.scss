@@ -1,3 +1,26 @@
-.card {
-    margin: 5px;
+.pokecard {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin: 17px;
+    background-color: grey;
+    align-items: flex-end;
+    flex-direction: row;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 7px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__item {
+        margin: 0 5px 0 5px;
+        list-style: none;
+    }
 }

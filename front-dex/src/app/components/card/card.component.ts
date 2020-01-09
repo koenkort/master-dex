@@ -12,6 +12,6 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.PokemonService.getPokemon().subscribe(pokemons => this.pokemons = pokemons)
+    this.PokemonService.getPokemon().subscribe(pokemons => this.pokemons = pokemons)    
   }
 }
