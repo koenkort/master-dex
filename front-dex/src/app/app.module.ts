@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FavouriteModule } from '../app/components/favourite/favourite.module';
+import { CaughtModule } from '../app/components/caught/caught.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FavouriteModule,
+    CaughtModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
