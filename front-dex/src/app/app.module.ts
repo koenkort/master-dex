@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FavouriteModule } from '../app/components/favourite/favourite.module';
-import { CatchedModule } from '../app/components/catched/catched.module';
+import { CaughtModule } from '../app/components/caught/caught.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { CatchedModule } from '../app/components/catched/catched.module';
     BrowserModule,
     AppRoutingModule,
     FavouriteModule,
-    CatchedModule,
+    CaughtModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

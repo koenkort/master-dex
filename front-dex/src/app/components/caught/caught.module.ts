@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CatchedComponent } from './catched.component';
+import { CaughtComponent } from './caught.component';
 
 const Components = [
-  CatchedComponent,
+  CaughtComponent,
 ];
 
 @NgModule({
@@ -13,4 +13,4 @@ const Components = [
   exports:  [...Components],
   schemas: []
 })
-export class CatchedModule { }
+export class CaughtModule { }
