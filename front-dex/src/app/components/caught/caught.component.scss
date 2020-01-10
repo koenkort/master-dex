@@ -1,0 +1,28 @@
+@import '../../../assets/scss/main.scss';
+
+label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.checkbox {
+    label:before {
+        background-color: $checkbox;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+    }
+
+    input[type=checkbox]:checked + label:before {
+        background: url("../../..//assets/images/pokeball.png");
+    }
+}
