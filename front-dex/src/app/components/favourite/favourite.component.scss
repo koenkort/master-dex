@@ -1,0 +1,38 @@
+@import '../../../assets/scss/main.scss';
+
+label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.checkbox {
+    label:before {
+        background: url("../../../assets/images/star-grey.png");
+    }
+
+    input[type=checkbox]:checked + label:before {
+        background: url("../../../assets/images/star-yellow.png")
+    }
+}
+
+.input {
+    background-color: $input-background;
+    border:  none;
+    outline: none;
+    color: $input-text;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: $overpass;
+
+    &:focus {
+        color: $input-text-focus;
+    }
+}

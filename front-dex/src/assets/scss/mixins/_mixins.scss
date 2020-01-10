@@ -9,23 +9,16 @@
     font-style: $font-style;
 }
 
-@mixin button-default {
-    width: 150px;
-    height: 30px;
-    border: none;
+@mixin input{
+    background-color: $input-background;
+    border:  none;
     outline: none;
-}
-
-@mixin input {
+    color: $input-text;
+    border-radius: 5px;
     padding: 5px;
-    width: 150px;
-    height: 30px;
-    border: none;
-    outline: none;
+    font-family: $overpass;
 
-}
-
-@mixin checkbox {
-    border: none;
-    outline: none;
+    &:focus {
+        color: $input-text-focus;
+    }
 }
