@@ -10,8 +10,8 @@ import PokemonResults from 'src/app/models/interfaces/PokemonResults';
 
 export class PokemonService {
 
-    getPokemon(): Observable<PokemonResults> {
-        return this.http.get<PokemonResults>(`http://pokeapi.co/api/v2/pokemon/?limit=811`)
+    getPokemon(): Observable<PokemonResults[]> {
+        return this.http.get<PokemonResults[]>(`http://pokeapi.co/api/v2/pokemon/?limit=151`)
     }
 
     constructor(private http: HttpClient){

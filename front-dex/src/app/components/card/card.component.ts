@@ -6,9 +6,18 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() pokemon: string;
+  @Input() pokemon: any;
+
+  pokemonUrl: string;
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.createUrl();
+  }
+
+  createUrl() {
+    let index = this.pokemon.url.split("/");
+    this.pokemonUrl = `https://pokeres.bastionbot.org/images/pokemon/${index[6]}.png`;
+  }
 }
