@@ -1,8 +1,4 @@
 <div class="home-container">
-    <div class="home-banner__container">
-        <h1 class="home-banner__title">Master-dex</h1>
-        <img class="home-banner__gif" src="../../../assets/images/thiccachu.gif">
-    </div>
     <div class="pokemon-list" >
         <app-card *ngFor="let pokemon of pokemons?.results;" [pokemon]="pokemon"></app-card>
     </div>
