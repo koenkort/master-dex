@@ -6,7 +6,7 @@
     &__container {
         display: flex;
         flex-direction: row;
-        margin: 12px;
+        margin: 12px 12px 12px 105px;
     }
     
     &__title {
@@ -20,7 +20,6 @@
     }
 }
 
-
 .home-logo {
     width: 100px;
     height: 60px;
@@ -28,6 +27,7 @@
 .pokemon-list {
     overflow-x: hidden;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
