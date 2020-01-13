@@ -1,9 +1,8 @@
 <div class="pokecard">
-    <img [src]="pokemonUrl" alt="" width="55px" height="55px">
+    <img class="pokecard__image" [src]="pokemonUrl" alt="">
     <ul class="pokecard__info">
         <li class="pokecard__item">#{{ index }}</li>
         <li class="pokecard__item">{{ pokemon.name }}</li>
         <li class="pokecard__item">Types</li>
     </ul>
 </div>
-
