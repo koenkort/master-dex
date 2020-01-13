@@ -2,9 +2,23 @@
 
 .navigation {
     display: flex;
-    background-color: $navbar;
+    background-color: $primary-theme;
     width: 100%;
     height: 75px;
+
+    &__item {
+        font-family: $overpass;
+        height: 75px;
+        width: 75px;
+        padding: 0 5px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary-theme-hover;
+        }
+    }
 
     &__title {
         display: flex;
@@ -19,20 +33,6 @@
         align-items: center;
         width: 100%;
         list-style-type: none;
-
-        &-item {
-            font-family: $overpass;
-            height: 75px;
-            width: 75px;
-            padding: 0 5px 0 5px;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-
-            &:hover {
-                background-color: $navbar-hover;
-            }
-        }
 
         &--right {
             justify-content: flex-end;
