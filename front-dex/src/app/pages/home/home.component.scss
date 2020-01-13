@@ -1,3 +1,30 @@
+@import '../../../assets/scss/main.scss';
+
+.home-banner{
+    width: 100%;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        margin: 12px;
+    }
+    
+    &__title {
+        @include font-face($roboto, 75px, $title, 500px);
+        margin: 0;
+        max-width: 375px;
+    }
+    &__gif {
+        width: 115px;
+        height: 75px;
+    }
+}
+
+
+.home-logo {
+    width: 100px;
+    height: 60px;
+}
 .pokemon-list {
     overflow-x: hidden;
     display: flex;
