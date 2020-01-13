@@ -14,14 +14,15 @@
     }
     
     &__title {
-        @include font-face($roboto, 50px, $text, 500px);
-        margin-top: 0;
+        @include font-face($roboto, 35px, $text, 500px);
+        margin-top: 10px;
         max-width: 375px;
     }
 
     &__gif {
         width: 95px;
         height: 55px;
+        margin-bottom: 38px;
     }
 
     &__item {
