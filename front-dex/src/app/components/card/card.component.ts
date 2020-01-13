@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
   @Input() pokemon: any;
 
+  index: number;
   pokemonUrl: string;
 
   constructor() { }
@@ -17,7 +18,8 @@ export class CardComponent implements OnInit {
   }
 
   createUrl() {
-    let index = this.pokemon.url.split("/");
-    this.pokemonUrl = `https://pokeres.bastionbot.org/images/pokemon/${index[6]}.png`;
+    let splicedUrl = this.pokemon.url.split("/");
+    this.index = splicedUrl[6];
+    this.pokemonUrl = `https://pokeres.bastionbot.org/images/pokemon/${this.index}.png`;
   }
 }
