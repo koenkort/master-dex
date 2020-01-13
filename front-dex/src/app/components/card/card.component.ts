@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 @Component({
   selector: 'app-card',
@@ -6,20 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() pokemon: any;
+  @Input() pokemon: Pokemon;
 
-  index: number;
   pokemonUrl: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.createUrl();
-  }
-
-  createUrl() {
-    let splicedUrl = this.pokemon.url.split("/");
-    this.index = splicedUrl[6];
-    this.pokemonUrl = `https://pokeres.bastionbot.org/images/pokemon/${this.index}.png`;
   }
 }
