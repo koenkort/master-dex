@@ -1,0 +1,42 @@
+@import '../assets/scss/main.scss';
+
+.navigation {
+    display: flex;
+    background-color: $primary-theme;
+    width: 100%;
+    height: 75px;
+
+    &__item {
+        font-family: $overpass;
+        height: 75px;
+        width: 75px;
+        padding: 0 5px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary-theme-hover;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $text;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        list-style-type: none;
+
+        &--right {
+            justify-content: flex-end;
+            margin-right: 10px;
+        }
+    }
+}
