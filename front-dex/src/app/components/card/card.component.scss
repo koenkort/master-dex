@@ -1,3 +1,5 @@
+@import '../../../assets/scss/helpers/vars';
+
 .pokecard {
     display: flex;
     width: 250px;
@@ -30,4 +32,77 @@
         margin: 0 5px 0 5px;
         list-style: none;
     }
+
+    &--normal {
+        background-color: $normal;
+    }
+
+    &--fire {
+        background: $fire;
+    }
+
+    &--fighting {
+        background: $fighting;
+    }
+
+    &--water {
+        background: $water;
+    }
+
+    &--flying {
+        background: $flying;
+    }
+
+    &--grass {
+        background: $grass;
+    }
+
+    &--poison {
+        background: $poison;
+    }
+
+    &--electric {
+        background: $electric;
+    }
+
+    &--ground {
+        background: $ground;
+    }
+
+    &--psychic {
+        background: $psychic;
+    }
+
+    &--rock {
+        background: $rock;
+    }
+
+    &--ice {
+        background: $ice;
+    }
+
+    &--bug {
+        background: $bug;
+    }
+
+    &--dragon {
+        background: $dragon;
+    }
+
+    &--ghost {
+        background: $ghost;
+    }
+
+    &--dark {
+        background: $dark;
+    }
+
+    &--steel {
+        background: $steel;
+    }
+
+    &--fairy {
+        background: $fairy;
+    }
 }
+
