@@ -1,38 +1,33 @@
 @import '../../../assets/scss/main.scss';
 
-label:before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    left: 0;
-    cursor: pointer;
-}
+.check {
 
-input[type=checkbox] {
-    display: none;
-}
-
-.checkbox {
-    label:before {
-        background: url("../../../assets/images/star-grey.png");
+    &__input {
+        cursor: pointer;
+        position: relative;
+        opacity: 0;
+        height: 0;
+        width: 0;
     }
 
-    input[type=checkbox]:checked + label:before {
-        background: url("../../../assets/images/star-yellow.png")
-    }
-}
+    &__checkmark {
+        display: flex;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        background-image: url("../../../assets/images/star-grey.png");
 
-.input {
-    background-color: $input-background;
-    border:  none;
-    outline: none;
-    color: $input-text;
-    border-radius: 5px;
-    padding: 5px;
-    font-family: $overpass;
-
-    &:focus {
-        color: $input-text-focus;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+      }
     }
-}
+
+    input:checked ~ .check__checkmark:after {
+        background-image: url("../../../assets/images/star-yellow.png");
+        width: inherit;
+        height: inherit;
+    }
+  }

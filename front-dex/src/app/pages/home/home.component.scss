@@ -9,7 +9,7 @@
         justify-content: center;
         margin-left: 115px;
     }
-    
+
     &__title {
         @include font-face($roboto, 75px, $title, 500px);
         margin: 0;
@@ -31,4 +31,18 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.input {
+    background-color: $input-background;
+    border:  none;
+    outline: none;
+    color: $input-text;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: $overpass;
+
+    &:focus {
+        color: $input-text-focus;
+    }
 }

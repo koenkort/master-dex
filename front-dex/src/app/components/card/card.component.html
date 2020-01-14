@@ -1,4 +1,12 @@
 <article class="pokecard" (click)="getSelectedPokemon(pokemon)" [ngClass]="setBackgroundColor(pokemon.types)">
+    <div class="pokecard__checkboxes">
+        <div class="pokecard__favourite">
+            <app-favourite></app-favourite>
+        </div>
+        <div class="pokecard__caught">
+        <app-caught></app-caught>
+        </div>
+    </div>
     <img class="pokecard__image" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
     <ul class="pokecard__info">
         <li class="pokecard__item">#{{ pokemon?.id }}</li>

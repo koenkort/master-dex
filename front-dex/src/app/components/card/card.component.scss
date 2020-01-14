@@ -10,8 +10,18 @@
     flex-direction: column;
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     border-radius: 7px;
-    padding: 15px 15px 0 15px;
-    font-family: $overpass;
+    padding: 0 15px 0 15px;
+
+
+    &__checkboxes {
+        display: flex;
+        position: absolute;
+        padding-right: 200px;
+        margin-bottom: 40px;
+    }
+    &__favourite {
+        margin-right: 5px;
+    }
 
     &:hover {
         cursor: pointer;
@@ -21,6 +31,7 @@
     &__image {
         width: 100%;
         height: 80%;
+        padding-top: 15px;
     }
 
     &__info {
