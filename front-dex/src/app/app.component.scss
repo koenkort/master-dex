@@ -13,9 +13,12 @@
     }
 
     &__title {
-        @include font-face($roboto, 35px, $text, 500);
         align-self: center;
         margin: 0px 5px 0 0;
+        outline: none;
+        cursor: pointer;
+
+        @include font-face($roboto, 35px, $text, 500);
     }
 
     &__gif {

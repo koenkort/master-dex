@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router'
 
 // pages
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 // components
 import { ComponentsModule } from '../components/components.module';
@@ -12,6 +13,7 @@ import { ComponentsModule } from '../components/components.module';
 
 const Pages = [
     HomeComponent,
+    LoginComponent,
 ]
 
 @NgModule({

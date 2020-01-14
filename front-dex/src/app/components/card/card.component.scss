@@ -1,4 +1,4 @@
-@import '../../../assets/scss/helpers/vars';
+@import '../../../assets/scss/main.scss';
 
 .pokecard {
     display: flex;
@@ -11,7 +11,7 @@
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     border-radius: 7px;
     padding: 0 15px 0 15px;
-
+    cursor: pointer;
 
     &__checkboxes {
         display: flex;
@@ -23,8 +23,8 @@
         margin-right: 5px;
     }
 
+
     &:hover {
-        cursor: pointer;
         opacity: 0.9;
     }
 
@@ -36,8 +36,14 @@
 
     &__info {
         display: flex;
-        justify-content: space-between;
         flex-direction: row;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        padding: 0;
+
+        @include font-face($overpass, 18px, $text);
     }
 
     &__item {
