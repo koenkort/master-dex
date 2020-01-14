@@ -11,8 +11,17 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 export class PokemonService {
 
     getPokemon(): Observable<Pokemon[]> {
+        const noGen = 0;
+        const genOne = 151;
+        const genTwo = 251;
+        const genThree = 386;
+        const genFour = 493;
+        const genFive = 649;
+        const genSix = 721;
+        const genSeven = 807;
         const pokemonData: Observable<Pokemon>[] = [];
-        for(let i = 1; i < 151; i++) {
+
+        for(let i = noGen+1; i <= genSeven; i++) {
             pokemonData.push(this.http.get<Pokemon>(`http://pokeapi.co/api/v2/pokemon/${i}`));
         }
         return zip(...pokemonData);
