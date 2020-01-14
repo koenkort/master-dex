@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 @Component({
@@ -8,12 +8,15 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 })
 export class CardComponent implements OnInit {
   @Input() pokemon: Pokemon;
-
-  pokemonUrl: string;
+  @Output() selectedPokemon: EventEmitter<Pokemon> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getSelectedPokemon(pokemon: Pokemon) {
+    this.selectedPokemon.emit(pokemon);
   }
 
   setBackgroundColor(types) {

@@ -1,4 +1,4 @@
-<article class="pokecard" [ngClass]="setBackgroundColor(pokemon.types)">
+<article class="pokecard" (click)="getSelectedPokemon(pokemon)" [ngClass]="setBackgroundColor(pokemon.types)">
     <img class="pokecard__image" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
     <ul class="pokecard__info">
         <li class="pokecard__item">#{{ pokemon?.id }}</li>

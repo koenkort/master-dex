@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon/get-pokemon.service';
+import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 @Component({
   selector: 'app-home',
@@ -13,5 +14,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.PokemonService.getPokemon().subscribe(pokemons => this.pokemons = pokemons)
+  }
+
+  selectedPokemon(pokemon: Pokemon) {
+    console.log(pokemon);
   }
 }

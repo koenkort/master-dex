@@ -1,5 +1,8 @@
 <div class="home-container">
     <div class="pokemon-list" >
-        <app-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-card>
+        <app-card *ngFor="let pokemon of pokemons"
+                  [pokemon]="pokemon"
+                  (selectedPokemon)="selectedPokemon($event)">
+        </app-card>
     </div>
 </div>
