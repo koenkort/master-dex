@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon/get-pokemon.service';
+import { PokemonFilterPipe } from '../../pipes/pokemon-filter.pipe'
 import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 @Component({

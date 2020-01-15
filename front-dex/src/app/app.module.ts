@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './components/components.module';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const appRoutes: Routes = [
@@ -25,6 +25,8 @@ const appRoutes: Routes = [
     PagesModule,
     ComponentsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
