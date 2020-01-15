@@ -1,48 +1,33 @@
 @import '../../../assets/scss/main.scss';
 
-.home-banner{
+.toolbar {
     width: 100%;
+    padding: 20px 20px 3px 42px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 0 auto;
 
-    &__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-left: 115px;
-    }
-
-    &__title {
-        @include font-face($roboto, 75px, $title, 500px);
-        margin: 0;
-        max-width: 375px;
-    }
-    &__gif {
-        width: 115px;
-        height: 75px;
+    &__search {
+        margin: 10px 100px 10px 0;
+        height: 20px;
+        background-color: $input-background;
+        border:  none;
+        outline: none;
+        color: $input-text;
+        border-radius: 5px;
+        padding: 5px;
+        font-family: $overpass;
+    
+        &:focus {
+            color: $input-text-focus;
+        }
     }
 }
 
-.home-logo {
-    width: 100px;
-    height: 60px;
-}
 .pokemon-list {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-}
-
-.search {
-    background-color: $input-background;
-    border:  none;
-    outline: none;
-    color: $input-text;
-    border-radius: 5px;
-    padding: 5px;
-    font-family: $overpass;
-
-    &:focus {
-        color: $input-text-focus;
-    }
 }

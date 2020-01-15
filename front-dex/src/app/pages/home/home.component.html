@@ -1,5 +1,7 @@
 <div class="home-container">
-    <input class="search" type="text" placeholder="Search pokémon" [(ngModel)]="searchTerm">
+    <section class="toolbar">
+        <input class="toolbar__search" type="text" placeholder="Search Pokémon" [(ngModel)]="searchTerm">
+    </section>
     <div class="pokemon-list" >
         <app-card *ngFor="let pokemon of pokemons | pokemonFilter:searchTerm"
                   [pokemon]="pokemon"
