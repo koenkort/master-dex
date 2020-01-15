@@ -14,11 +14,15 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
-  setBackgroundColor(types, name) {
+  setBackgroundColor(types, name, type=true) {
     const className: string = name;
+    let expression: string;
 
-    let expression = types.length === 2 ?  types[1].type.name :  types[0].type.name;
-
+    if (type === true) {
+      expression = types.length === 2 ?  types[1].type.name :  types[0].type.name;
+    } else {
+      expression = types;
+    }
     switch(expression) {
       case 'normal':
         return className + '--normal';

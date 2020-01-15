@@ -1,4 +1,4 @@
-<article class="pokecard" (click)="getSelectedPokemon(pokemon)" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard')">
+<article class="pokecard" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard')">
     <section class="pokecard__header">
         <div class="pokecard__options">
             <app-favourite></app-favourite>
@@ -6,12 +6,12 @@
         </div>
 
         <div class="pokecard__types">
-            <span class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[1]">{{ pokemon?.types[1].type.name }}</span>
-            <span class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[0]"> {{ pokemon?.types[0].type.name }}</span>
+            <span class="pokecard__type" *ngIf="pokemon?.types[1]" [ngClass]="setBackgroundColor(pokemon?.types[1].type.name, 'pokecard__type', false)">{{ pokemon?.types[1].type.name }}</span>
+            <span class="pokecard__type" *ngIf="pokemon?.types[0]" [ngClass]="setBackgroundColor(pokemon?.types[0].type.name, 'pokecard__type', false)"> {{ pokemon?.types[0].type.name }}</span>
         </div>
     </section>
 
-    <img class="pokecard__image" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
+    <img class="pokecard__image" (click)="getSelectedPokemon(pokemon)" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
     <section class="pokecard__info">
         <span class="pokecard__item">#{{ pokemon?.id }}</span>
         <span class="pokecard__item">{{ pokemon?.name | titlecase }}</span>

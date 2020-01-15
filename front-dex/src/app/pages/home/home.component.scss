@@ -1,10 +1,9 @@
 @import '../../../assets/scss/main.scss';
 
 .toolbar {
-    padding: 20px 20px 3px 42px;
     display: flex;
+    padding: 10px 20px 10px 40px;
     flex-direction: row;
-    margin-right: 0 auto;
 
     &__search {
         margin: 10px 100px 10px 0;
