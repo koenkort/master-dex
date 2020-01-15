@@ -4,5 +4,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: blue;
+    background: rgba(20, 20, 20, 0.4);
+
+    &__card {
+        width: 1200px;
+        height: 80vh;
+        margin: 0 auto;
+        background: blue;
+    }
 }
