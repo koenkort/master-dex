@@ -7,21 +7,21 @@
         <app-caught></app-caught>
         </div>
     </div> -->
-    <div class="pokecard__header">
+    <section class="pokecard__header">
         <div class="pokecard__options">
             <app-favourite></app-favourite>
             <app-caught class="pokecard__option-spacing"></app-caught>
         </div>
 
         <div class="pokecard__types">
-            <li class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[1]">{{ pokemon?.types[1].type.name }}</li>
-            <li class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[0]"> {{ pokemon?.types[0].type.name }}</li>
+            <span class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[1]">{{ pokemon?.types[1].type.name }}</span>
+            <span class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[0]"> {{ pokemon?.types[0].type.name }}</span>
         </div>
-    </div>
+    </section>
 
     <img class="pokecard__image" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
-    <ul class="pokecard__info">
-        <li class="pokecard__item">#{{ pokemon?.id }}</li>
-        <li class="pokecard__item">{{ pokemon?.name | titlecase }}</li>
-    </ul>
+    <section class="pokecard__info">
+        <span class="pokecard__item">#{{ pokemon?.id }}</span>
+        <span class="pokecard__item">{{ pokemon?.name | titlecase }}</span>
+    </section>
 </article>
