@@ -4,12 +4,7 @@
     </section>
     <div class="pokemon-list" >
         <app-card *ngFor="let pokemon of pokemons | pokemonFilter:searchTerm"
-                  [pokemon]="pokemon"
-                  (selectedPokemon)="selectedPokemon($event)">
+                  [pokemon]="pokemon">
         </app-card>
-        <app-pokemon-detail *ngIf="chosenPokemon"
-                            [pokemon]="chosenPokemon"
-                            (close)="close()">
-        </app-pokemon-detail>
     </div>
 </div>

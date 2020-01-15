@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon/get-pokemon.service';
-import { PokemonFilterPipe } from '../../pipes/pokemon-filter.pipe'
 import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 @Component({
@@ -20,9 +19,5 @@ export class HomeComponent implements OnInit {
 
   selectedPokemon(pokemon: Pokemon) {
     this.chosenPokemon = pokemon;
-  }
-
-  close() {
-    this.chosenPokemon = undefined;
   }
 }

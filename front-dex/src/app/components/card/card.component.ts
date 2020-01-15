@@ -8,15 +8,10 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 })
 export class CardComponent implements OnInit {
   @Input() pokemon: Pokemon;
-  @Output() selectedPokemon: EventEmitter<Pokemon> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  getSelectedPokemon(pokemon: Pokemon) {
-    this.selectedPokemon.emit(pokemon);
   }
 
   setBackgroundColor(types, name) {
