@@ -1,17 +1,27 @@
-<article class="pokecard" (click)="getSelectedPokemon(pokemon)" [ngClass]="setBackgroundColor(pokemon.types)">
-    <div class="pokecard__checkboxes">
+<article class="pokecard" (click)="getSelectedPokemon(pokemon)" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard')">
+    <!-- <div class="pokecard__checkboxes">
         <div class="pokecard__favourite">
             <app-favourite></app-favourite>
         </div>
         <div class="pokecard__caught">
         <app-caught></app-caught>
         </div>
+    </div> -->
+    <div class="pokecard__header">
+        <div class="pokecard__options">
+            <app-favourite></app-favourite>
+            <app-caught class="pokecard__option-spacing"></app-caught>
+        </div>
+
+        <div class="pokecard__types">
+            <li class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[1]">{{ pokemon?.types[1].type.name }}</li>
+            <li class="pokecard__type" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard__type')" *ngIf="pokemon?.types[0]"> {{ pokemon?.types[0].type.name }}</li>
+        </div>
     </div>
+
     <img class="pokecard__image" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
     <ul class="pokecard__info">
         <li class="pokecard__item">#{{ pokemon?.id }}</li>
         <li class="pokecard__item">{{ pokemon?.name | titlecase }}</li>
-        <li class="pokecard__item" *ngIf="pokemon?.types[1]">{{ pokemon?.types[1].type.name }}</li>
-        <li class="pokecard__item" *ngIf="pokemon?.types[0]"> {{ pokemon?.types[0].type.name }}</li>
     </ul>
 </article>

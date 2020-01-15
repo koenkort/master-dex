@@ -19,8 +19,8 @@ export class CardComponent implements OnInit {
     this.selectedPokemon.emit(pokemon);
   }
 
-  setBackgroundColor(types) {
-    const className: string = 'pokecard';
+  setBackgroundColor(types, name) {
+    const className: string = name;
 
     let expression = types.length === 2 ?  types[1].type.name :  types[0].type.name;
 
