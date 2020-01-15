@@ -4,5 +4,9 @@
                   [pokemon]="pokemon"
                   (selectedPokemon)="selectedPokemon($event)">
         </app-card>
+        <app-pokemon-detail *ngIf="chosenPokemon"
+                            [pokemon]="chosenPokemon"
+                            (close)="close()">
+        </app-pokemon-detail>
     </div>
 </div>

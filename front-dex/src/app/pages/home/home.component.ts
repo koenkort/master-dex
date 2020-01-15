@@ -9,6 +9,7 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 })
 export class HomeComponent implements OnInit {
   pokemons;
+  chosenPokemon: Pokemon;
   constructor(private PokemonService: PokemonService) {
   }
 
@@ -17,6 +18,10 @@ export class HomeComponent implements OnInit {
   }
 
   selectedPokemon(pokemon: Pokemon) {
-    console.log(pokemon);
+    this.chosenPokemon = pokemon;
+  }
+
+  close() {
+    this.chosenPokemon = undefined;
   }
 }
