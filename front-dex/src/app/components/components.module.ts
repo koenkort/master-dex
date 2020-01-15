@@ -22,6 +22,6 @@ const Components = [
     ],
     exports: [...Components],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
-        
+
 })
 export class ComponentsModule { }
