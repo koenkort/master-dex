@@ -11,17 +11,18 @@ import { Subscriber } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  pokemons;
+  pokemons: Pokemon[];
   chosenPokemon: Pokemon;
-  types;
-  result;
-  typeSelected: number;
+  types: Type;
   constructor(private PokemonService: PokemonService, private TypeService: TypeService) {
   }
 
-  ngOnInit() {
+  getData():void {
     this.PokemonService.getPokemon().subscribe(pokemons => this.pokemons = pokemons)
     this.TypeService.getType().subscribe(types => {this.types = types});
-    this.typeSelected = 0;
+  }
+
+  ngOnInit() {
+    this.getData();
   }
 }

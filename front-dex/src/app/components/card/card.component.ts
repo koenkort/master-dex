@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-card',
@@ -14,7 +15,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
-  setBackgroundColor(types, name, type=true) {
+  setBackgroundColor(types, name, type=true): Observable<Pokemon>{
     const className: string = name;
     let expression: string;
 
