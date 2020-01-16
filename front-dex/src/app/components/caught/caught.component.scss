@@ -18,9 +18,9 @@
         background-color: $checkbox;
         border-radius: 10px;
 
-    &:after {
-        content: "";
-      }
+        &:after {
+            content: "";
+        }
     }
 
     input:checked ~ .check__checkmark:after {
@@ -28,4 +28,4 @@
         width: inherit;
         height: inherit;
     }
-  }
+}

@@ -17,9 +17,9 @@
         height: 20px;
         background-image: url("../../../assets/icons/star-grey.svg");
 
-    &:after {
-        content: "";
-      }
+        &:after {
+            content: "";
+        }
     }
 
     input:checked ~ .check__checkmark:after {
@@ -27,4 +27,4 @@
         width: inherit;
         height: inherit;
     }
-  }
+}
