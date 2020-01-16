@@ -6,7 +6,7 @@
     flex-direction: row;
 
     &__search {
-        margin: 10px 100px 10px 0;
+        margin: 0 0px 10px 0;
         height: 20px;
         background-color: $input-background;
         border:  none;
@@ -18,6 +18,21 @@
 
         &:focus {
             color: $input-text-focus;
+        }
+    }
+
+    &__dropdown {
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        outline: none;
+        color: $input-text;
+        background-color:  $input-background;
+        font-family: $overpass;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $checkbox;
         }
     }
 }

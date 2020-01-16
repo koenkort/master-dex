@@ -1,6 +1,12 @@
 <div class="home-container">
     <section class="toolbar">
         <input class="toolbar__search" type="text" placeholder="Search Pokémon" [(ngModel)]="searchTerm">
+        <select class="toolbar__dropdown">
+            <option>All</option>
+            <option *ngFor="let type of types.results" value="type.name" class="toolbar__dropdown-option">
+                {{ type.name | titlecase }}
+            </option>
+        </select>
     </section>
     <div class="pokemon-list" >
         <app-card *ngFor="let pokemon of pokemons | pokemonFilter:searchTerm"
