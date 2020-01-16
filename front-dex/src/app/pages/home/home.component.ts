@@ -4,6 +4,7 @@ import { TypeService } from '../../services/pokemon/get-pokemon-type.service';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
 import { Type } from 'src/app/models/interfaces/Type';
 import { Subscriber } from 'rxjs';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

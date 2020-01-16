@@ -5,7 +5,7 @@ import { PokemonFilterPipe } from './pokemon-filter.pipe';
 
 @NgModule({
   imports:      [ CommonModule ],
-  declarations: [ PokemonFilterPipe  ],
-  exports:      [ PokemonFilterPipe  ]
+  declarations: [ PokemonFilterPipe ],
+  exports:      [ PokemonFilterPipe ]
 })
 export class PipesModule { }
