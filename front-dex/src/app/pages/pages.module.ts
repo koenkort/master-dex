@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 
 // components
 import { ComponentsModule } from '../components/components.module';
+import { TeambuilderComponent } from './teambuilder/teambuilder.component';
 
 
 const Pages = [
@@ -17,7 +18,7 @@ const Pages = [
 ]
 
 @NgModule({
-    declarations: [...Pages],
+    declarations: [...Pages, TeambuilderComponent],
     imports: [
         CommonModule,
         RouterModule,
