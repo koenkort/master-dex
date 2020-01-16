@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-card',
