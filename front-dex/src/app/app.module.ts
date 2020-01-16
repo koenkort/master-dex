@@ -1,19 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { PagesModule } from './pages/pages.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ComponentsModule } from './components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' }
-];
+import { LoaderService } from './services/loader/loader.service';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +23,10 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    LoaderService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
