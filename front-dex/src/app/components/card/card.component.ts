@@ -15,7 +15,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
-  setBackgroundColor(types, name, type=true): Observable<Pokemon>{
+  setBackgroundColor(types, name, type=true): string{
     const className: string = name;
     let expression: string;
 
