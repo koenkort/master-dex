@@ -1,15 +1,21 @@
 <nav class="navigation">
     <ul class="navigation__list">
-        <li class="navigation__item">
-            <a class="navigation__title">Home</a>
-        </li>
-        <li class="navigation__item">
-            <a class="navigation__title">Team</a>
+        <li class="navigation__container">
+            <h1 class="navigation__title" [routerLink]="['/home']">Master-dex</h1>
+            <img class="navigation__gif" src="../../../assets/images/thiccachu.gif">
         </li>
     </ul>
     <ul class="navigation__list navigation__list--right">
         <li class="navigation__item">
-            <a class="navigation__title">Login</a>
+            <a class="navigation__tag" [routerLink]="['/teambuilder']">Teambuilder</a>
+        </li>
+        <li class="navigation__item">
+            <a class="navigation__tag">Sign up</a>
+        </li>
+        <li class="navigation__item">
+            <a class="navigation__tag">Login</a>
         </li>
     </ul>
 </nav>
+
+<router-outlet></router-outlet>

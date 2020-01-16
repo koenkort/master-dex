@@ -1,10 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { PagesModule } from './pages/pages.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FavouriteModule } from '../app/components/favourite/favourite.module';
-import { CaughtModule } from '../app/components/caught/caught.module';
+import { HomeComponent } from './pages/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ComponentsModule } from './components/components.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
@@ -13,8 +22,11 @@ import { CaughtModule } from '../app/components/caught/caught.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FavouriteModule,
-    CaughtModule,
+    PagesModule,
+    ComponentsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

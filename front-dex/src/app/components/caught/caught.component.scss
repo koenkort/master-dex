@@ -1,28 +1,31 @@
 @import '../../../assets/scss/main.scss';
 
-label:before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    left: 0;
-    cursor: pointer;
+.check {
 
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-.checkbox {
-    label:before {
-        background-color: $checkbox;
-        width: 15px;
-        height: 15px;
-        border-radius: 10px;
+    &__input {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
     }
 
-    input[type=checkbox]:checked + label:before {
-        background: url("../../..//assets/images/pokeball.png");
+    &__checkmark {
+        display: flex;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background-color: $checkbox;
+        border-radius: 10px;
+
+        &:after {
+            content: "";
+        }
+    }
+
+    input:checked ~ .check__checkmark:after {
+        background-image: url("../../../assets/icons/pokeball.svg");
+        width: inherit;
+        height: inherit;
     }
 }
