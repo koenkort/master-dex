@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   openModel(pokemon: Pokemon): void {
     if(this.activePokemonId !== pokemon.id) {
       this.activePokemon = pokemon;
-      console.log(this.activePokemon)
       this.activePokemonId = pokemon.id;
     } else {
       this.activePokemonId = undefined;
