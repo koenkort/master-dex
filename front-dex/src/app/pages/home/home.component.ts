@@ -13,11 +13,11 @@ import { Subscriber } from 'rxjs';
 export class HomeComponent implements OnInit {
   pokemons: Pokemon[];
   chosenPokemon: Pokemon;
-  types: Type;
+  types: Type = {count: 0, results: []};
   constructor(private PokemonService: PokemonService, private TypeService: TypeService) {
   }
 
-  getData():void {
+  getData(): void {
     this.PokemonService.getPokemon().subscribe(pokemons => this.pokemons = pokemons)
     this.TypeService.getType().subscribe(types => {this.types = types});
   }
