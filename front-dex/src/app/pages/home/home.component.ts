@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   chosenPokemon: Pokemon;
   types: Type;
   showModel: boolean = false;
-  activePokemonID: number;
+  activePokemonId: number;
   activePokemon: Pokemon;
 
   constructor(private PokemonService: PokemonService, private TypeService: TypeService) {
@@ -23,12 +23,17 @@ export class HomeComponent implements OnInit {
 
   closeModel(): void {
     this.activePokemon = undefined;
-    console.log('closed');
   }
 
   openModel(pokemon: Pokemon): void {
-    this.activePokemon = pokemon;
-    console.log(pokemon);
+    if(this.activePokemonId !== pokemon.id) {
+      this.activePokemon = pokemon;
+      console.log(this.activePokemon)
+      this.activePokemonId = pokemon.id;
+    } else {
+      this.activePokemonId = undefined;
+    }
+
   }
 
   getData():void {
