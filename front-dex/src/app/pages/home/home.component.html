@@ -11,8 +11,11 @@
     </section>
     <div class="pokemon-list" >
         <app-card *ngFor="let pokemon of pokemons | pokemonFilter:searchTerm"
-                  [pokemon]="pokemon">
+                  [pokemon]="pokemon"
+                  (picked)="closeModel(); openModel($event)">
         </app-card>
     </div>
 </div>
-<app-pokemon-details></app-pokemon-details>>
+<app-pokemon-details *ngIf="activePokemon"
+                     [pokemon]="activePokemon">
+</app-pokemon-details>
