@@ -18,6 +18,7 @@ export default interface Pokemon {
     game_indices: [];
     base_experience: number;
     types: TypeSlot[];
+    is_caught: boolean;
 }
 
 interface TypeSlot {
