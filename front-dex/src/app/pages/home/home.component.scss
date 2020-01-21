@@ -41,7 +41,7 @@
             color: $input-text-focus;
         }
 
-        &--large {
+        &--spacing {
             width: 150px;
         }
     }
@@ -60,7 +60,7 @@
 
     &__input {
         cursor: pointer;
-        position: absolute;
+        position: fixed;
         opacity: 0;
         height: 20px;
         width: 20px;
