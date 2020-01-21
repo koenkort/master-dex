@@ -1,3 +1,5 @@
+import { InternalType } from './Type';
+
 export default interface Pokemon {
     forms: [];
     abilities: [];
@@ -15,5 +17,11 @@ export default interface Pokemon {
     order: number;
     game_indices: [];
     base_experience: number;
-    types: [];
+    types: TypeSlot[];
+    is_caught: boolean;
+}
+
+interface TypeSlot {
+    slot: number,
+    type: InternalType,
 }

@@ -9,6 +9,10 @@ import { FavouriteComponent } from './favourite/favourite.component';
 import { CaughtComponent } from './caught/caught.component';
 import { PokemonFilterPipe } from '../pipes/pokemon-filter.pipe';
 import { LoaderComponent } from './loader/loader.component'
+import { FilterTypePipe } from '../pipes/type-filter.pipe';
+import { FilterGenerationPipe } from '../pipes/generation.filter.pipe';
+import { FilterCaughtPipe } from '../pipes/caught-filter.pipe';
+
 
 const Components = [
     CardComponent,
@@ -16,6 +20,9 @@ const Components = [
     CaughtComponent,
     LoaderComponent,
     PokemonFilterPipe,
+    FilterTypePipe,
+    FilterGenerationPipe,
+    FilterCaughtPipe,
 ]
 
 @NgModule({

@@ -2,7 +2,7 @@
     <section class="pokecard__header">
         <div class="pokecard__options">
             <app-favourite></app-favourite>
-            <app-caught class="pokecard__option-spacing"></app-caught>
+            <app-caught class="pokecard__option-spacing" (click)="caughtCheck(pokemon)"></app-caught>
         </div>
 
         <div class="pokecard__types">
