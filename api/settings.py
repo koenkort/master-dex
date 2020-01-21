@@ -45,7 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
+
+TOKEN_EXPIRED_AFTER_SECONDS = 86400
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
