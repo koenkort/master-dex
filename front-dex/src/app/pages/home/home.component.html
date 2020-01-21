@@ -8,7 +8,7 @@
                 {{ type.name | titlecase }}
             </option>
         </select>
-        <select class="toolbar__dropdown toolbar__dropdown--large">
+        <select class="toolbar__dropdown toolbar__dropdown--large" [(ngModel)]="generation">
             <option selected="selected" hidden>Generation</option>
             <option>All</option>
             <option *ngFor="let generation of generations.results">
@@ -23,7 +23,7 @@
         </select>
     </section>
     <div class="pokemon-list" >
-        <app-card *ngFor="let pokemon of pokemons | pokemonFilter:searchTerm | typeFilter:typeSelected"
+        <app-card *ngFor="let pokemon of pokemons | generationFilter:generation | pokemonFilter:searchTerm | typeFilter:typeSelected"
                   [pokemon]="pokemon">
         </app-card>
     </div>

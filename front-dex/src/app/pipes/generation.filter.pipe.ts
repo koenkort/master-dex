@@ -3,15 +3,27 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 
 @Pipe({
-    name: 'typeFilter'
+    name: 'generationFilter'
 })
 
-export class FilterTypePipe implements PipeTransform {
+export class FilterGenerationPipe implements PipeTransform {
     transform(pokemons: Pokemon[], searchterm: string): Pokemon[]{
-        if (searchterm == "All" || !searchterm){
-            return pokemons;
+        switch(searchterm) {
+            case 'Generation-i | All':
+                return pokemons.slice(0, 151);
+            case 'Generation-ii':
+                return pokemons.slice(151, 251);
+            case 'Generation-iii':
+                return pokemons.slice(251, 386);
+            case 'Generation-iv':
+                return pokemons.slice(386, 493);
+            case 'Generation-v':
+                return pokemons.slice(493, 649);
+            case 'Generation-vi':
+                return pokemons.slice(649, 721);
+            case 'Generation-vii':
+                return pokemons.slice(721, 807);
         }
-        return pokemons.filter(pokemon =>
-            pokemon.types.find(({type}) => type.name.toLowerCase() === searchterm.toLowerCase()));
+        return pokemons.slice(0, 151);
     }
 }

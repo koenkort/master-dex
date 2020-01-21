@@ -9,6 +9,8 @@ import { FavouriteComponent } from './favourite/favourite.component';
 import { CaughtComponent } from './caught/caught.component';
 import { PokemonFilterPipe } from '../pipes/pokemon-filter.pipe';
 import { FilterTypePipe } from '../pipes/type-filter.pipe';
+import { FilterGenerationPipe } from '../pipes/generation.filter.pipe';
+
 
 
 const Components = [
@@ -17,6 +19,7 @@ const Components = [
     CaughtComponent,
     PokemonFilterPipe,
     FilterTypePipe,
+    FilterGenerationPipe,
 ]
 
 @NgModule({
