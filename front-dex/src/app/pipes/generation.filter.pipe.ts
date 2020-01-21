@@ -9,7 +9,9 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 export class FilterGenerationPipe implements PipeTransform {
     transform(pokemons: Pokemon[], searchterm: string): Pokemon[]{
         switch(searchterm) {
-            case 'Generation-i | All':
+            case 'All':
+                return pokemons.slice(0, 807);
+            case 'Generation-i':
                 return pokemons.slice(0, 151);
             case 'Generation-ii':
                 return pokemons.slice(151, 251);
