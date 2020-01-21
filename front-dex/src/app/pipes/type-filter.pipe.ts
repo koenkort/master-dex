@@ -12,6 +12,6 @@ export class FilterTypePipe implements PipeTransform {
             return pokemons;
         }
         return pokemons.filter(pokemon =>
-            pokemon.types.find(({slot, type}) => type.name.toLowerCase() === searchterm.toLowerCase()));
+            pokemon.types.find(({type}) => type.name.toLowerCase() === searchterm.toLowerCase()));
     }
 }

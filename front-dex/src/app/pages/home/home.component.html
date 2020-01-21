@@ -7,6 +7,12 @@
                 {{ type.name | titlecase }}
             </option>
         </select>
+        <select class="toolbar__dropdown toolbar__dropdown--large">
+            <option>All</option>
+            <option class="toolbar__dropdown-option" *ngFor="let generation of generations.results">
+                {{ generation.name | titlecase }}
+            </option>
+        </select>
     </section>
     <div class="pokemon-list" >
         <app-card *ngFor="let pokemon of pokemons | pokemonFilter:searchTerm | typeFilter:typeSelected"

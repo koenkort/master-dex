@@ -30,9 +30,14 @@
         background-color:  $input-background;
         font-family: $overpass;
         border-radius: 5px;
+        margin-left: 20px;
 
-        &:hover {
-            background-color: $checkbox;
+        &:focus {
+            color: $input-text-focus;
+        }
+
+        &--large {
+            width: 200px;
         }
     }
 }

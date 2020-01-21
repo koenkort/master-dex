@@ -22,7 +22,7 @@ export class PokemonService {
         const pokemonData: Observable<Pokemon>[] = [];
 
         for(let i = noGen+1; i <= gen1; i++) {
-            pokemonData.push(this.http.get<Pokemon>(`http://pokeapi.co/api/v2/pokemon/${i}`));
+            pokemonData.push(this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${i}`));
         }
         return zip(...pokemonData);
     }
