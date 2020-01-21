@@ -20,7 +20,10 @@
             <option>All</option>
             <option>Caught</option>
         </select>
-        <input type="checkbox" class="toolbar__checkbox" [(ngModel)]="caught">
+        <div class="check">
+            <input class="check__input" type="checkbox" [(ngModel)]="caught"/>
+            <span class="check__checkmark"></span>
+        </div>
     </section>
     <div class="pokemon-list" >
         <app-card *ngFor="let pokemon of pokemons | generationFilter:generation | pokemonFilter:searchTerm | typeFilter:type | caughtFilter:caught"
