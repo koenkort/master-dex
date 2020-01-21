@@ -18,5 +18,6 @@
 </div>
 <app-pokemon-details *ngIf="activePokemon"
                      [pokemon]="activePokemon"
-                     (toggleModel)="closeModel()">
+                     (toggleModel)="closeModel()"
+                     [@slideInOut]>
 </app-pokemon-details>

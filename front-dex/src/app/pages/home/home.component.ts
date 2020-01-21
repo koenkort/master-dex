@@ -3,11 +3,28 @@ import { PokemonService } from '../../services/pokemon/get-pokemon.service';
 import { TypeService } from '../../services/pokemon/get-pokemon-type.service';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
 import { Type } from 'src/app/models/interfaces/Type';
+import {
+  trigger,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({opacity: '0'}),
+        animate('200ms ease-in', style({opacity: '1'}))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({opacity: '0'}))
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
   pokemons: Pokemon[];
@@ -22,6 +39,7 @@ export class HomeComponent implements OnInit {
 
   closeModel(): void {
     this.activePokemon = undefined;
+    console.log('close')
   }
 
   openModel(pokemon: Pokemon): void {
@@ -31,7 +49,6 @@ export class HomeComponent implements OnInit {
     } else {
       this.activePokemonId = undefined;
     }
-
   }
 
   getData():void {
