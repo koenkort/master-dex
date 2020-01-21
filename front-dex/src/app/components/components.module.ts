@@ -10,7 +10,7 @@ import { CaughtComponent } from './caught/caught.component';
 import { PokemonFilterPipe } from '../pipes/pokemon-filter.pipe';
 import { FilterTypePipe } from '../pipes/type-filter.pipe';
 import { FilterGenerationPipe } from '../pipes/generation.filter.pipe';
-
+import { FilterCaughtPipe } from '../pipes/caught-filter.pipe';
 
 
 const Components = [
@@ -20,6 +20,7 @@ const Components = [
     PokemonFilterPipe,
     FilterTypePipe,
     FilterGenerationPipe,
+    FilterCaughtPipe,
 ]
 
 @NgModule({

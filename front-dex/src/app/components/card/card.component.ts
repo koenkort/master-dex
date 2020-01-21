@@ -16,7 +16,7 @@ export class CardComponent implements OnInit {
   }
 
   caughtCheck(pokemon) {
-    pokemon.is_caught = !pokemon.is_caught
+    pokemon.is_caught = !pokemon.is_caught;
     localStorage.setItem(this.pokemonStorage, pokemon.id);
   }
 

@@ -1,7 +1,7 @@
 <div class="home-container">
     <section class="toolbar">
         <input class="toolbar__search" type="text" placeholder="Search Pokémon" [(ngModel)]="searchTerm">
-        <select class="toolbar__dropdown" [(ngModel)]="typeSelected">
+        <select class="toolbar__dropdown" [(ngModel)]="type">
             <option selected="selected" hidden>Type</option>
             <option>All</option>
             <option *ngFor="let type of types.results">
@@ -18,12 +18,12 @@
         <select class="toolbar__dropdown">
             <option selected="selected" hidden>Team</option>
             <option>All</option>
-            <option>Favourite</option>
             <option>Caught</option>
         </select>
+        <input type="checkbox" class="toolbar__checkbox" [(ngModel)]="caught">
     </section>
     <div class="pokemon-list" >
-        <app-card *ngFor="let pokemon of pokemons | generationFilter:generation | pokemonFilter:searchTerm | typeFilter:typeSelected"
+        <app-card *ngFor="let pokemon of pokemons | generationFilter:generation | pokemonFilter:searchTerm | typeFilter:type | caughtFilter:caught"
                   [pokemon]="pokemon">
         </app-card>
     </div>

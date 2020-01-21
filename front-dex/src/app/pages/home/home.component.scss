@@ -5,6 +5,11 @@
     padding: 20px 20px 20px 40px;
     flex-direction: row;
 
+    &__checkbox {
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+    }
     &__search {
         margin: 0 0px 10px 0;
         height: 20px;
