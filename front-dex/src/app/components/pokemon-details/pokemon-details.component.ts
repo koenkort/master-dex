@@ -15,11 +15,9 @@ export class PokemonDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.pokemon);
   }
 
   closeModel() {
-    console.log('hi');
     this.toggleModel.emit();
   }
 
