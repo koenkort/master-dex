@@ -2,16 +2,24 @@
     <section class="toolbar">
         <input class="toolbar__search" type="text" placeholder="Search Pokémon" [(ngModel)]="searchTerm">
         <select class="toolbar__dropdown" [(ngModel)]="typeSelected">
+            <option selected="selected" hidden>Type</option>
             <option>All</option>
-            <option *ngFor="let type of types.results" class="toolbar__dropdown-option">
+            <option *ngFor="let type of types.results">
                 {{ type.name | titlecase }}
             </option>
         </select>
         <select class="toolbar__dropdown toolbar__dropdown--large">
+            <option selected="selected" hidden>Generation</option>
             <option>All</option>
-            <option class="toolbar__dropdown-option" *ngFor="let generation of generations.results">
+            <option *ngFor="let generation of generations.results">
                 {{ generation.name | titlecase }}
             </option>
+        </select>
+        <select class="toolbar__dropdown">
+            <option selected="selected" hidden>Team</option>
+            <option>All</option>
+            <option>Favourite</option>
+            <option>Caught</option>
         </select>
     </section>
     <div class="pokemon-list" >

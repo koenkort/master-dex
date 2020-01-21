@@ -2,7 +2,7 @@
 
 .toolbar {
     display: flex;
-    padding: 10px 20px 10px 40px;
+    padding: 20px 20px 20px 40px;
     flex-direction: row;
 
     &__search {
@@ -37,7 +37,7 @@
         }
 
         &--large {
-            width: 200px;
+            width: 150px;
         }
     }
 }
