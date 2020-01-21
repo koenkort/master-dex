@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
 
@@ -9,12 +9,18 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 })
 export class PokemonDetailsComponent implements OnInit {
   cardComponent = new CardComponent();
+  @Output() toggleModel: EventEmitter<any> = new EventEmitter();
   @Input() pokemon:Pokemon;
 
   constructor() { }
 
   ngOnInit() {
     console.log(this.pokemon);
+  }
+
+  closeModel() {
+    console.log('hi');
+    this.toggleModel.emit();
   }
 
 }

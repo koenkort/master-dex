@@ -17,5 +17,6 @@
     </div>
 </div>
 <app-pokemon-details *ngIf="activePokemon"
-                     [pokemon]="activePokemon">
+                     [pokemon]="activePokemon"
+                     (toggleModel)="closeModel()">
 </app-pokemon-details>

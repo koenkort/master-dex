@@ -1,10 +1,49 @@
 .details {
     position: fixed;
+    max-height: 45vh;
     bottom: 0;
-    right: 0;
-    left: 0;
+    right: 400px;
+    left: 400px;
     z-index: 100;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     background: white;
+    border: 5px yellow solid;
+    display: flex;
+
+    &__name {
+        text-align: center;
+    }
+
+    &__pictures {
+        display: block;
+        padding: 0;
+    }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        width: 250px;
+        height: 250px;
+    }
+
+    &__header {
+        min-width: 40%;
+        max-width: 60%;
+        border-right: 2px yellow solid;
+    }
+
+    &__delete {
+        height: 50px;
+    }
+
+    &__evolutions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__sprites {
+        width: 120px;
+        height: 120px;
+    }
 }

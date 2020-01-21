@@ -1,7 +1,24 @@
-<section class="details" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
-    <h2 class="details__name">{{ pokemon.name | titlecase }}</h2>
-    <img class="details__image" width="120px" height="120px" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png"><br>
-    <img src="{{pokemon?.sprites.front_default}}" alt="">
-    <img src="{{pokemon?.sprites.back_default}}" alt=""> 
-    <img src="{{pokemon?.sprites.front_shiny}}" alt="">
-</section>
+<div class="details" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
+    <header class="details__header">
+        <h2 class="details__name">{{ pokemon.name | titlecase }}</h2>
+        <main class="details__pictures">
+            <img class="details__image" width="120px" height="120px" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
+            <div class="details__evolutions">
+                <img class="details__sprites" src="{{pokemon?.sprites.front_default}}" alt="">
+                <img class="details__sprites" src="{{pokemon?.sprites.back_default}}" alt="">
+                <img class="details__sprites" src="{{pokemon?.sprites.front_shiny}}" alt="">
+            </div>
+            <div class="details__evolutions">
+                <img class="details__sprites" src="{{pokemon?.sprites.front_default}}" alt="">
+                <img class="details__sprites" src="{{pokemon?.sprites.back_default}}" alt="">
+                <img class="details__sprites" src="{{pokemon?.sprites.front_shiny}}" alt="">
+            </div>
+        </main>
+    </header>
+    <main class="details__content">
+        <h3>Informatie</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laudantium deserunt atque doloremque accusamus praesentium, delectus commodi cum culpa, minima temporibus illo necessitatibus maiores rem cupiditate excepturi, ea ad aliquam?Blanditiis dicta aperiam amet quo aspernatur at excepturi dolor accusamus, maiores animi delectus enim ipsa soluta adipisci praesentium aliquid debitis pariatur eveniet nesciunt explicabo possimus ratione esse doloremque. Quis, aspernatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laudantium deserunt atque doloremque accusamus praesentium, delectus commodi cum culpa, minima temporibus illo necessitatibus maiores rem cupiditate excepturi, ea ad aliquam?Blanditiis dicta aperiam amet quo aspernatur at excepturi dolor accusamus, maiores animi delectus enim ipsa soluta adipisci praesentium aliquid debitis pariatur eveniet nesciunt explicabo possimus ratione esse doloremque. Quis, aspernatur!</p>
+    </main>
+    <button class="details__delete" (click)="closeModel()">Click</button>
+</div>
