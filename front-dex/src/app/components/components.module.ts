@@ -7,13 +7,20 @@ import { RouterModule } from '@angular/router'
 import { CardComponent } from './card/card.component';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { CaughtComponent } from './caught/caught.component';
-import { PokemonFilterPipe } from '../pipes/pokemon-filter.pipe'
+import { PokemonFilterPipe } from '../pipes/pokemon-filter.pipe';
+import { FilterTypePipe } from '../pipes/type-filter.pipe';
+import { FilterGenerationPipe } from '../pipes/generation.filter.pipe';
+import { FilterCaughtPipe } from '../pipes/caught-filter.pipe';
+
 
 const Components = [
     CardComponent,
     FavouriteComponent,
     CaughtComponent,
-    PokemonFilterPipe
+    PokemonFilterPipe,
+    FilterTypePipe,
+    FilterGenerationPipe,
+    FilterCaughtPipe,
 ]
 
 @NgModule({
