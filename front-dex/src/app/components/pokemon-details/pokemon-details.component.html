@@ -16,9 +16,11 @@
         </main>
     </header>
     <main class="details__content">
-        <h3>Informatie</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laudantium deserunt atque doloremque accusamus praesentium, delectus commodi cum culpa, minima temporibus illo necessitatibus maiores rem cupiditate excepturi, ea ad aliquam?Blanditiis dicta aperiam amet quo aspernatur at excepturi dolor accusamus, maiores animi delectus enim ipsa soluta adipisci praesentium aliquid debitis pariatur eveniet nesciunt explicabo possimus ratione esse doloremque. Quis, aspernatur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laudantium deserunt atque doloremque accusamus praesentium, delectus commodi cum culpa, minima temporibus illo necessitatibus maiores rem cupiditate excepturi, ea ad aliquam?Blanditiis dicta aperiam amet quo aspernatur at excepturi dolor accusamus, maiores animi delectus enim ipsa soluta adipisci praesentium aliquid debitis pariatur eveniet nesciunt explicabo possimus ratione esse doloremque. Quis, aspernatur!</p>
+        <h3>Information</h3>
+        <p>Height: {{ pokemon.height | number : '0.1' }} m</p>
+        <p>Weight: {{ pokemon.weight }} lbs.</p>
+        <p>Base exp: {{ pokemon.base_experience }} exp</p>
+        <p>Abilities: </p>
     </main>
     <button class="details__delete" (click)="closeModel()">Click</button>
 </div>
