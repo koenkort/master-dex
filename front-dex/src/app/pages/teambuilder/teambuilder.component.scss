@@ -19,5 +19,9 @@
         height: 130px;
         padding-left: 25px;
     }
-}
 
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
