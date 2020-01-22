@@ -19,50 +19,5 @@
         height: 130px;
         padding-left: 25px;
     }
-
-    &__content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    &__team {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    &__list {
-        height: 250px;
-        width: 15%;
-        display: flex;
-        flex-direction: column;
-        overflow-y: scroll;
-    }
 }
 
-.team-card {
-    width: 250px;
-    height: 250px;
-    display: flex;
-    margin: 17px;
-    align-items: flex-end;
-    flex-direction: column;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 7px;
-    padding: 10px 15px;
-    position: relative;
-
-    &__add {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: red;
-        fill: currentColor;
-    }
-}

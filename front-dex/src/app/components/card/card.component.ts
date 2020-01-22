@@ -8,7 +8,6 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 })
 export class CardComponent implements OnInit {
   @Input() pokemon: Pokemon;
-  pokemonStorage: string = 'pokemon';
 
   constructor() { }
 
@@ -16,8 +15,7 @@ export class CardComponent implements OnInit {
   }
 
   caughtCheck(pokemon: Pokemon): void {
-    pokemon.is_caught = !pokemon.is_caught;
-    localStorage.setItem(this.pokemonStorage, `${pokemon.id}`);
+    pokemon.is_caught = !pokemon.is_caught; 
   }
 
   setBackgroundColor(types, name, type=true): string{
