@@ -1,4 +1,5 @@
 <div class="check">
-    <input class="check__input" type="checkbox"/>
+    <input *ngIf="caught; else notCaught" class="check__input" type="checkbox" checked/>
+    <ng-template #notCaught><input class="check__input" type="checkbox"/></ng-template>
     <span class="check__checkmark"></span>
 </div>

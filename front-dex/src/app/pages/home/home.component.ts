@@ -6,8 +6,6 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 import { Type } from 'src/app/models/interfaces/Type';
 import { Generation } from 'src/app/models/interfaces/Generation';
 
-import { Subscriber } from 'rxjs';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,7 +16,9 @@ export class HomeComponent implements OnInit {
   chosenPokemon: Pokemon;
   types: Type = {count: 0, results: []};
   generations: Generation = {count: 0, results: []};
-  constructor(private PokemonService: PokemonService, private TypeService: TypeService, private GenerationService: GenerationService) {
+  constructor(private PokemonService: PokemonService,
+              private TypeService: TypeService,
+              private GenerationService: GenerationService) {
   }
 
   getData(): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-caught',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./caught.component.scss']
 })
 export class CaughtComponent implements OnInit {
-
+  @Input() caught: boolean;
   constructor() { }
 
   ngOnInit() {
+    console.log(this.caught);
   }
 
 }
