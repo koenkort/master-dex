@@ -1,14 +1,20 @@
 @import '../../../assets/scss/main.scss';
 
-.details {
-    width: 400px;
-    height: 575px;
-    font-family: $overpass;
+.details-container {
     z-index: 2;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+}
+
+.details {
+    position: relative;
+    width: 400px;
+    height: 575px;
+    font-family: $overpass;
     border-radius: 7px;
     background: $text;
     border: 8px $pokemon-border solid;
@@ -78,79 +84,20 @@
 
         @include font-face($overpass, 18px, $text);
     }
+
+ // image section
+ 
+    &__pictures {
+        right: -104px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 48.75%;
+        margin-top: 10px;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        border: 8px $pokemon-border solid;
+        border-left: none;
+    }
 }
 
-// .details {
-//     width: 750px;
-//     height: 575px;
-//     font-family: $overpass;
-//     z-index: 2;
-//     position: fixed;
-//     left: 50%;
-//     top: 50%;
-//     transform: translate(-50%, -50%);
-//     border-radius: 7px;
-//     background: white;
-//     border: 5px $text solid;
-//     display: flex;
-
-//     &__name {
-//         color: $text;
-//         text-align: center;
-//     }
-
-    // &__pictures {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     padding: 0;
-    // }
-
-    // &__image {
-    //     width: 250px;
-    //     height: 250px;
-    // }
-
-    // &__header {
-    //     min-width: 40%;
-    //     max-width: 60%;
-    //     border-right: 5px $text solid;;
-    // }
-
-//     &__close {
-//         cursor: pointer;
-//         height: 40px;
-//         width: 40px;
-//         outline: none;
-//         border: none;
-//         background: transparent;
-//         background-size: contain;
-//         background-position: center;
-//         background-repeat: no-repeat;
-//         background-image: url("../../../assets/icons/close.svg");
-//     }
-
-//     &__evolutions {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-
-//     &__sprites {
-//         width: 100px;
-//         height: 100px;
-//     }
-
-//     &__title {
-//         color: $text;
-//     }
-
-//     &__items {
-//         color: $text;
-//     }
-
-//     &__content {
-//         width: 100%;
-//         display: flex;
-//         flex-direction: column;
-//     }
-// }
