@@ -15,4 +15,3 @@ export class PokemonFilterPipe implements PipeTransform {
             pokemon.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
     }
 }
-

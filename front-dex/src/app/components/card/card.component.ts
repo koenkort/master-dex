@@ -9,7 +9,6 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 export class CardComponent implements OnInit {
   @Input() pokemon: Pokemon;
   @Output() picked: EventEmitter<any> = new EventEmitter();
-
   memory: number;
 
   constructor() { }
@@ -19,6 +18,10 @@ export class CardComponent implements OnInit {
 
   getSelectedPokemon(pokemon: Pokemon) {
     this.picked.emit(pokemon);
+  }
+
+  caughtCheck(pokemon: Pokemon): void {
+    pokemon.is_caught = !pokemon.is_caught;
   }
 
   setBackgroundColor(types, name, type=true): string{
