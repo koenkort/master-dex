@@ -1,4 +1,28 @@
-<div class="details" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
+<main class="details" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
+    <section class="details__header">
+        <h2 class="details__name">{{ pokemon.name | titlecase }}</h2>
+
+        <div class="details__info">
+            <div class="pokecard__type" *ngIf="pokemon?.types[1]" [ngClass]="cardComponent.setBackgroundColor(pokemon?.types[1].type.name, 'pokecard__type', false)">{{ pokemon?.types[1].type.name }}</div>
+            <div class="pokecard__type" *ngIf="pokemon?.types[0]" [ngClass]="cardComponent.setBackgroundColor(pokemon?.types[0].type.name, 'pokecard__type', false)"> {{ pokemon?.types[0].type.name }}</div>
+            <button class="details__close" (click)="closeModel()"></button>
+        </div>
+    </section>
+    <section class="details__container">
+        <img class="details__image" width="120px" height="120px" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
+    </section>
+    <section class="details__content">
+        <article>
+            <p class="details__items">Nmr: #{{ pokemon.id }}</p>
+            <p class="details__items">Height: {{ pokemon.height / 10 }} m</p>
+            <p class="details__items">Weight: {{ pokemon.weight / 10 }} kg.</p>
+            <p class="details__items">Base exp: {{ pokemon.base_experience }} exp.</p>
+            <p class="details__items">Abilities: {{ pokemon.abilities[0].ability.name }}, {{ pokemon?.abilities[1].ability.name }}</p>
+        </article>
+    </section>
+</main>
+
+<!-- <div class="details" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
     <header class="details__header">
         <h2 class="details__name">{{ pokemon.name | titlecase }}</h2>
         <main class="details__pictures">
@@ -19,5 +43,5 @@
         <p class="details__items">Base exp: {{ pokemon.base_experience }} exp.</p>
         <p class="details__items">Abilities: </p>
     </main>
-    <button class="details__delete" (click)="closeModel()">Click</button>
-</div>
+    <button class="details__close" (click)="closeModel()"></button>
+</div> -->

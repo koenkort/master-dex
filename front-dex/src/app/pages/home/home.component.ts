@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit {
 
   closeModel(): void {
     this.activePokemon = undefined;
-    console.log('close')
   }
 
   openModel(pokemon: Pokemon): void {

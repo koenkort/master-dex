@@ -1,29 +1,66 @@
 @import '../../../assets/scss/main.scss';
 
 .details {
-    width: 750px;
+    width: 400px;
     height: 575px;
     font-family: $overpass;
-
+    z-index: 2;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 7px;
-    background: white;
-    border: 5px $text solid;
+    background: $text;
+    border: 8px $pokemon-border solid;
     display: flex;
+    flex-direction: column;
 
-    &__name {
-        color: $text;
-        text-align: center;
+// header section
+
+    &__header {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        align-items: flex-end;
     }
 
-    &__pictures {
+    &__name {
+        padding-left: 30px;
+        margin: 0;
+
+        @include font-face($overpass, 24px, $text);
+    }
+
+    &__info {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+    }
+
+    &__close {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        outline: none;
+        border: none;
+        background: transparent;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../../../assets/icons/close.svg");
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-top: -7px;
+    }
+
+// image section
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        margin: 0px 30px;
+        border: 5px solid $pokemon-border;
     }
 
     &__image {
@@ -31,31 +68,89 @@
         height: 250px;
     }
 
-    &__header {
-        min-width: 40%;
-        max-width: 60%;
-        border-right: 5px $text solid;;
-    }
+// content section
 
-    &__delete {
-        height: 50px;
-    }
-
-    &__evolutions {
+    &__content {
         display: flex;
-        justify-content: space-between;
-    }
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 45px;
 
-    &__sprites {
-        width: 100px;
-        height: 100px;
+        @include font-face($overpass, 18px, $text);
     }
-
-    &__title {
-        color: $text;
-    }
-
-    &__items {
-        color: $text;
-    } 
 }
+
+// .details {
+//     width: 750px;
+//     height: 575px;
+//     font-family: $overpass;
+//     z-index: 2;
+//     position: fixed;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     border-radius: 7px;
+//     background: white;
+//     border: 5px $text solid;
+//     display: flex;
+
+//     &__name {
+//         color: $text;
+//         text-align: center;
+//     }
+
+    // &__pictures {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     padding: 0;
+    // }
+
+    // &__image {
+    //     width: 250px;
+    //     height: 250px;
+    // }
+
+    // &__header {
+    //     min-width: 40%;
+    //     max-width: 60%;
+    //     border-right: 5px $text solid;;
+    // }
+
+//     &__close {
+//         cursor: pointer;
+//         height: 40px;
+//         width: 40px;
+//         outline: none;
+//         border: none;
+//         background: transparent;
+//         background-size: contain;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         background-image: url("../../../assets/icons/close.svg");
+//     }
+
+//     &__evolutions {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+//     &__sprites {
+//         width: 100px;
+//         height: 100px;
+//     }
+
+//     &__title {
+//         color: $text;
+//     }
+
+//     &__items {
+//         color: $text;
+//     }
+
+//     &__content {
+//         width: 100%;
+//         display: flex;
+//         flex-direction: column;
+//     }
+// }
