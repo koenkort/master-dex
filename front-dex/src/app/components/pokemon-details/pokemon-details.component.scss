@@ -1,10 +1,12 @@
+@import '../../../assets/scss/main.scss';
+
 .details {
+    width: 750px;
+    height: 575px;
     position: fixed;
-    max-height: 45vh;
-    bottom: 0;
-    right: 400px;
-    left: 400px;
-    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     background: white;
@@ -12,17 +14,19 @@
     display: flex;
 
     &__name {
-        text-align: center;
+        text-align: start;
+
+        @include font-face($overpass, 18px, $text);
     }
 
     &__pictures {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0;
     }
 
     &__image {
-        display: block;
-        margin: 0 auto;
         width: 250px;
         height: 250px;
     }
@@ -43,7 +47,7 @@
     }
 
     &__sprites {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 }
