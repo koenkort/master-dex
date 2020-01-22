@@ -9,10 +9,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border-radius: 7px;
     background: white;
-    border: 5px yellow solid;
+    border: 5px $text solid;
     display: flex;
 
     &__name {
@@ -35,7 +34,7 @@
     &__header {
         min-width: 40%;
         max-width: 60%;
-        border-right: 2px yellow solid;
+        border-right: 5px $text solid;;
     }
 
     &__delete {
@@ -58,5 +57,5 @@
 
     &__items {
         color: $text;
-    }
+    } 
 }
