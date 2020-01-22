@@ -17,7 +17,6 @@ export class PokemonDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.pokemon.height = this.pokemon.height / 10;
   }
 
   closeModel() {

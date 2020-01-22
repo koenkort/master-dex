@@ -3,6 +3,8 @@
 .details {
     width: 750px;
     height: 575px;
+    font-family: $overpass;
+
     position: fixed;
     left: 50%;
     top: 50%;
@@ -14,9 +16,8 @@
     display: flex;
 
     &__name {
-        text-align: start;
-
-        @include font-face($overpass, 18px, $text);
+        color: $text;
+        text-align: center;
     }
 
     &__pictures {
@@ -49,5 +50,13 @@
     &__sprites {
         width: 100px;
         height: 100px;
+    }
+
+    &__title {
+        color: $text;
+    }
+
+    &__items {
+        color: $text;
     }
 }

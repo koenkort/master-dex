@@ -6,21 +6,18 @@
             <div class="details__evolutions">
                 <img class="details__sprites" src="{{pokemon?.sprites.front_default}}" alt="">
                 <img class="details__sprites" src="{{pokemon?.sprites.back_default}}" alt="">
-                <img class="details__sprites" src="{{pokemon?.sprites.front_shiny}}" alt="">
             </div>
             <div class="details__evolutions">
-                <img class="details__sprites" src="{{pokemon?.sprites.front_default}}" alt="">
-                <img class="details__sprites" src="{{pokemon?.sprites.back_default}}" alt="">
                 <img class="details__sprites" src="{{pokemon?.sprites.front_shiny}}" alt="">
             </div>
         </main>
     </header>
     <main class="details__content">
-        <h3>Information</h3>
-        <p>Height: {{ pokemon.height | number : '0.1' }} m</p>
-        <p>Weight: {{ pokemon.weight }} lbs.</p>
-        <p>Base exp: {{ pokemon.base_experience }} exp</p>
-        <p>Abilities: </p>
+        <h2 class="details__title">Information</h2>
+        <p class="details__items">Height: {{ pokemon.height / 10 }} m</p>
+        <p class="details__items">Weight: {{ pokemon.weight }} lbs.</p>
+        <p class="details__items">Base exp: {{ pokemon.base_experience }} exp.</p>
+        <p class="details__items">Abilities: </p>
     </main>
     <button class="details__delete" (click)="closeModel()">Click</button>
 </div>
