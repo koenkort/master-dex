@@ -8,14 +8,21 @@ import { CardComponent } from './card/card.component';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { CaughtComponent } from './caught/caught.component';
 import { PokemonFilterPipe } from '../pipes/pokemon-filter.pipe';
-import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component'
+import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
+import { FilterTypePipe } from '../pipes/type-filter.pipe';
+import { FilterGenerationPipe } from '../pipes/generation.filter.pipe';
+import { FilterCaughtPipe } from '../pipes/caught-filter.pipe';
+
 
 const Components = [
     CardComponent,
     FavouriteComponent,
     CaughtComponent,
     PokemonFilterPipe,
-    PokemonDetailsComponent
+    PokemonDetailsComponent,
+    FilterTypePipe,
+    FilterGenerationPipe,
+    FilterCaughtPipe,
 ]
 
 @NgModule({

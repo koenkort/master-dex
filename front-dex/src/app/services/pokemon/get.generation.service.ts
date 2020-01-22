@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Type } from 'src/app/models/interfaces/Type';
+import { Generation } from 'src/app/models/interfaces/Generation';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class TypeService {
+export class GenerationService {
 
-public getType(): Observable<Type>{
+public getGeneration(): Observable<Generation>{
 
-    return this.httpClient.get<Type>(`https://pokeapi.co/api/v2/type`);
+    return this.httpClient.get<Generation>(`https://pokeapi.co/api/v2/generation`);
 }
 
   constructor(private httpClient: HttpClient) { }
