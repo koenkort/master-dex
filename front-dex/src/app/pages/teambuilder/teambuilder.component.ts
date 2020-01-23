@@ -31,7 +31,7 @@ import {
   ]
 })
 export class TeambuilderComponent {
-  pokemons: Pokemon[];
+  pokemons: Pokemon[] = [];
   isOpen: Boolean = false;
 
   constructor(private pokemonService: PokemonTeamService){}
