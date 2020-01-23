@@ -7,7 +7,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(211, 211, 211, 0.8);
+    background-color: $secondary-checkbox;
     z-index: 99999;
 
     &__loader {
@@ -21,16 +21,14 @@
         background-size: 300px;
 
         &--pokemon1 {
-            background: url(../../../assets/icons/jolteon_walking.gif);
+            background: url(../../../assets/icons/jolteon_walking.gif) no-repeat;
             background-size: 250px;
-            background-repeat: no-repeat;
             transform: translate(-35%, -28%);
         }
 
         &--pokemon2 {
-            background: url(../../../assets/icons/glaceon_walking.gif);
+            background: url(../../../assets/icons/glaceon_walking.gif) no-repeat;
             background-size: 230px;
-            background-repeat: no-repeat;
             transform: translate(40%, -30%) scaleX(-1);
         }
     }
