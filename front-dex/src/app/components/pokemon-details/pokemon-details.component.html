@@ -19,9 +19,9 @@
                 <li class="details__items">Weight: {{ pokemon.weight / 10 }} kg.</li>
                 <li class="details__items">Base exp: {{ pokemon.base_experience }} exp.</li>
                 <li class="details__items">Abilities: 
-                    <span>{{ pokemon.abilities[0]?.ability.name }}</span>,
-                    <span>{{ pokemon.abilities[1]?.ability.name }}</span>,
-                    <span>{{ pokemon.abilities[2]?.ability.name }}</span>
+                    <span>{{ pokemon.abilities[0]?.ability.name }}</span>
+                    <span><span *ngIf="pokemon.abilities[1]">, </span>{{ pokemon.abilities[1]?.ability.name }}</span>
+                    <span><span *ngIf="pokemon.abilities[2]">, </span>{{ pokemon.abilities[2]?.ability.name }}</span>
                 </li>
             </ul>
         </section>
