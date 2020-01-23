@@ -22,14 +22,14 @@ const Components = [
     FilterTypePipe,
     FilterGenerationPipe,
     FilterCaughtPipe,
-    TeamOverlayComponent
+    TeamOverlayComponent,
 ]
 
 @NgModule({
     declarations: [...Components],
     imports: [
         CommonModule,
-        RouterModule,
+        RouterModule
     ],
     exports: [...Components],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
