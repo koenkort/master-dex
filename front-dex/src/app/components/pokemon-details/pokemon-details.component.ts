@@ -11,7 +11,7 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 export class PokemonDetailsComponent implements OnInit {
   cardComponent = new CardComponent();
-  @Output() toggleModel: EventEmitter<any> = new EventEmitter();
+  @Output() toggleModel: EventEmitter<Boolean> = new EventEmitter();
   @Input() pokemon:Pokemon;
 
   constructor() { }
@@ -19,11 +19,7 @@ export class PokemonDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  closeModel() {
+  closeModel(): void {
     this.toggleModel.emit();
   }
-
-  pokemonHeightCalculation() {
-  }
-
 }

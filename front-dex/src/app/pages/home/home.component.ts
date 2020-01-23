@@ -30,13 +30,13 @@ import { Subscriber } from 'rxjs';
     ])
   ]
 })
+
 export class HomeComponent implements OnInit {
   pokemons: Pokemon[];
   chosenPokemon: Pokemon;
-  // types: Type;
   showModel: boolean = false;
-  activePokemonId: number;
-  activePokemon: Pokemon;
+  activePokemonId: number | undefined;
+  activePokemon: Pokemon | undefined;
   types: Type = {count: 0, results: []};
   generations: Generation = {count: 0, results: []};
   constructor(private PokemonService: PokemonService, private TypeService: TypeService, private GenerationService: GenerationService) {

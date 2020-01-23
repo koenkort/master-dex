@@ -8,7 +8,7 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 })
 export class CardComponent implements OnInit {
   @Input() pokemon: Pokemon;
-  @Output() picked: EventEmitter<any> = new EventEmitter();
+  @Output() picked: EventEmitter<Pokemon> = new EventEmitter();
   memory: number;
 
   constructor() { }

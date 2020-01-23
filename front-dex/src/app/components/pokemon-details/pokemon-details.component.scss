@@ -21,8 +21,6 @@
     display: flex;
     flex-direction: column;
 
-// header section
-
     &__header {
         width: 100%;
         height: 40px;
@@ -56,17 +54,14 @@
         background-position: center;
         background-repeat: no-repeat;
         background-image: url("../../../assets/icons/close.svg");
-        margin-left: 10px;
-        margin-right: 5px;
-        margin-top: -5px;
+        margin: -5px 5px 0 10px;
+        padding: 0;
     }
-
-// image section
 
     &__container {
         display: flex;
         justify-content: center;
-        margin: 0px 30px;
+        margin: 0 30px;
         border: 5px solid $pokemon-border;
     }
 
@@ -74,8 +69,6 @@
         width: 250px;
         height: 250px;
     }
-
-// content section
 
     &__content {
         display: flex;
@@ -86,19 +79,25 @@
         @include font-face($overpass, 18px, $text);
     }
 
- // image section
+    &__list {
+        margin: 0;
+        padding: 20px 0 0;
+        list-style: none;
+    }
+
+    &__items {
+        margin: 10px 0;
+    }
 
     &__pictures {
         right: -104px;
         position: absolute;
         display: flex;
         flex-direction: column;
-        height: 48.75%;
-        margin-top: 10px;
+        margin: 10px 0 0;
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
         border: 8px $pokemon-border solid;
         border-left: none;
     }
 }
-

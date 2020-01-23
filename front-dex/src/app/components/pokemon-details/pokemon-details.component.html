@@ -1,5 +1,5 @@
 <main class="details-container">
-    <main class="details" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
+    <article class="details" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
         <section class="details__header">
             <h2 class="details__name">{{ pokemon.name | titlecase }}</h2>
 
@@ -9,27 +9,27 @@
                 <button class="details__close" (click)="closeModel()"></button>
             </div>
         </section>
-        <section class="details__container">
+        <figure class="details__container">
             <img class="details__image" width="120px" height="120px" src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon?.id}}.png">
-        </section>
+        </figure>
         <section class="details__content">
-            <article>
-                <p class="details__items">Nmr: #{{ pokemon.id }}</p>
-                <p class="details__items">Height: {{ pokemon.height / 10 }} m</p>
-                <p class="details__items">Weight: {{ pokemon.weight / 10 }} kg.</p>
-                <p class="details__items">Base exp: {{ pokemon.base_experience }} exp.</p>
-                <p class="details__items">Abilities: 
+            <ul class="details__list">
+                <li class="details__items">Nmr: #{{ pokemon.id }}</li>
+                <li class="details__items">Height: {{ pokemon.height / 10 }} m</li>
+                <li class="details__items">Weight: {{ pokemon.weight / 10 }} kg.</li>
+                <li class="details__items">Base exp: {{ pokemon.base_experience }} exp.</li>
+                <li class="details__items">Abilities: 
                     <span>{{ pokemon.abilities[0]?.ability.name }}</span>,
-                    <span>{{ pokemon.abilities[1]?.ability.name }}</span>, 
+                    <span>{{ pokemon.abilities[1]?.ability.name }}</span>,
                     <span>{{ pokemon.abilities[2]?.ability.name }}</span>
-                </p>
-            </article>
+                </li>
+            </ul>
         </section>
-    </main>
+    </article>
 
-    <main class="details__pictures" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')" *ngIf="pokemon.sprites">
+    <figure class="details__pictures" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')" *ngIf="pokemon.sprites">
             <img class="details__sprites" src="{{pokemon?.sprites.front_default}}" alt="">
             <img class="details__sprites" src="{{pokemon?.sprites.back_default}}" alt="">
             <img class="details__sprites" src="{{pokemon?.sprites.front_shiny}}" alt="">
-    </main>
+    </figure>
 </main>
