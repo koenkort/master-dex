@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
 import { PokemonTeamService } from 'src/app/services/pokemon/pokemon-team.service';
 
@@ -7,7 +7,7 @@ import { PokemonTeamService } from 'src/app/services/pokemon/pokemon-team.servic
   templateUrl: './teambuilder.component.html',
   styleUrls: ['./teambuilder.component.scss']
 })
-export class TeambuilderComponent implements OnInit {
+export class TeambuilderComponent {
   pokemons: Pokemon[];
 
   constructor(private pokemonService: PokemonTeamService){}
@@ -16,7 +16,7 @@ export class TeambuilderComponent implements OnInit {
     this.pokemons = this.pokemonService.getCaughtPokemon();
   }
 
-  ngOnInit() {
+  ngDoCheck(): void {
     this.getData();
   }
 

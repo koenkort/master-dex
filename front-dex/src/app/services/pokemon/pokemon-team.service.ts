@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
-import { Observable } from 'rxjs';
+import { TeambuilderComponent } from 'src/app/pages/teambuilder/teambuilder.component';
+
 
 @Injectable({
   providedIn: 'root'
