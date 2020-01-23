@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router'
 
 // Components
 import { CardComponent } from './card/card.component';
-import { FavouriteComponent } from './favourite/favourite.component';
 import { CaughtComponent } from './caught/caught.component';
 import { PokemonFilterPipe } from '../pipes/pokemon-filter.pipe';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
@@ -16,7 +15,6 @@ import { FilterCaughtPipe } from '../pipes/caught-filter.pipe';
 
 const Components = [
     CardComponent,
-    FavouriteComponent,
     CaughtComponent,
     PokemonFilterPipe,
     PokemonDetailsComponent,
