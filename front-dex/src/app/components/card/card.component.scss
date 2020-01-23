@@ -129,11 +129,11 @@
     }
 
     &__image {
-        width: 80%;
         height: 80%;
         align-self: center;
         transition: all .3s;
         cursor: pointer;
+        padding: 0 40px;
     }
 
     &__info {
