@@ -18,6 +18,7 @@ export class CardComponent implements OnInit {
     for(let i = 0; i < savedPokemons.length; i++) {
       if(savedPokemons[i].id === this.pokemon.id) {
         this.caught = true;
+        this.pokemon.is_caught = !this.pokemon.is_caught;
         break;
       }
     }
