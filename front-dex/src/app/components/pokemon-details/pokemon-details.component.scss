@@ -42,6 +42,7 @@
 
     &__info {
         display: flex;
+        margin-bottom: 3px;
     }
 
     &__close {
@@ -57,7 +58,7 @@
         background-image: url("../../../assets/icons/close.svg");
         margin-left: 10px;
         margin-right: 5px;
-        margin-top: -7px;
+        margin-top: -5px;
     }
 
 // image section
@@ -86,7 +87,7 @@
     }
 
  // image section
- 
+
     &__pictures {
         right: -104px;
         position: absolute;
