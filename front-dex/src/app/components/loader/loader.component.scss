@@ -1,3 +1,5 @@
+@import '../../../assets/scss/main.scss';
+
 .overlay {
     position: fixed;
     display: block;
@@ -5,13 +7,31 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(139, 0, 0, 0.8);
+    background-color: rgba(211, 211, 211, 0.8);
     z-index: 99999;
-  
+
     &__loader {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-120%,-50%) scaleX(-1);
+        background: url(../../../assets/icons/ruby.gif);
+        background-size: 300px;
+
+        &--pokemon1 {
+            background: url(../../../assets/icons/jolteon_walking.gif);
+            background-size: 250px;
+            background-repeat: no-repeat;
+            transform: translate(-35%, -28%);
+        }
+
+        &--pokemon2 {
+            background: url(../../../assets/icons/glaceon_walking.gif);
+            background-size: 230px;
+            background-repeat: no-repeat;
+            transform: translate(40%, -30%) scaleX(-1);
+        }
     }
-  }
+}
