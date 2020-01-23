@@ -23,7 +23,7 @@
         </section>
     </main>
 
-    <main class="details__pictures" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')">
+    <main class="details__pictures" [ngClass]="cardComponent.setBackgroundColor(pokemon.types, 'pokecard')" *ngIf="pokemon.sprites">
             <img class="details__sprites" src="{{pokemon?.sprites.front_default}}" alt="">
             <img class="details__sprites" src="{{pokemon?.sprites.back_default}}" alt="">
             <img class="details__sprites" src="{{pokemon?.sprites.front_shiny}}" alt="">
