@@ -4,7 +4,11 @@
         <img src="../../../assets/images/phantump.png" class="teambuilder__image">
     </section>
     <section class="teambuilder__cards">
-    <app-card *ngFor="let pokemon of pokemons"
-                [pokemon]="pokemon"></app-card>
+        <div class="teambuilder__empty-card" (click)="toggleModal()">
+
+        </div>
+    <!--<app-card *ngFor="let pokemon of pokemons"
+                [pokemon]="pokemon"></app-card>-->
     </section>
 </main>
+<app-team-overlay></app-team-overlay>

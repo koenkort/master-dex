@@ -12,12 +12,22 @@ export class TeambuilderComponent {
 
   constructor(private pokemonService: PokemonTeamService){}
 
+  ngOnInit(): void {
+    this.getData();
+  }
+
   getData():void {
+    console.log('getdata()');
     this.pokemons = this.pokemonService.getCaughtPokemon();
   }
 
+  toggleModal() {
+    console.log('HI');
+  }
+
   ngDoCheck(): void {
-    this.getData();
+    console.log('do check');
+    //this.getData();
   }
 
 }

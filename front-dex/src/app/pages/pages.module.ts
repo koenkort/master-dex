@@ -15,10 +15,11 @@ import { TeambuilderComponent } from './teambuilder/teambuilder.component';
 const Pages = [
     HomeComponent,
     LoginComponent,
+    TeambuilderComponent
 ]
 
 @NgModule({
-    declarations: [...Pages, TeambuilderComponent],
+    declarations: [...Pages],
     imports: [
         CommonModule,
         RouterModule,

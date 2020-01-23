@@ -23,5 +23,15 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__empty-card {
+        width: 250px;
+        height: 250px;
+        margin: 17px;
+        box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 7px;
+        padding: 10px 15px;
     }
 }
