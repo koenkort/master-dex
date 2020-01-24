@@ -100,4 +100,12 @@
         border: 8px $pokemon-border solid;
         border-left: none;
     }
+
+    &__sprites {
+        height: auto;
+        width: 100%;
+        max-width: 96px;
+      
+
+    }
 }
