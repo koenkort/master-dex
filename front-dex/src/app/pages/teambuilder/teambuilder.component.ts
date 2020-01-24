@@ -41,17 +41,13 @@ export class TeambuilderComponent {
   }
 
   getData():void {
-    console.log('getdata()');
     this.pokemons = this.pokemonService.getCaughtPokemon();
   }
 
   toggleModal() {
-    console.log('HI');
   }
 
   ngDoCheck(): void {
-    console.log('do check');
-    //this.getData();
+    this.getData();
   }
-
 }

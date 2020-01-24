@@ -30,7 +30,7 @@ import { Generation } from 'src/app/models/interfaces/Generation';
 })
 
 export class HomeComponent implements OnInit {
-  pokemons: Pokemon[];
+  pokemons: Pokemon[] = [];
   chosenPokemon: Pokemon;
   showModel: boolean = false;
   activePokemonId: number | undefined;

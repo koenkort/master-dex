@@ -10,7 +10,6 @@ export class CaughtComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.caught);
   }
 
 }

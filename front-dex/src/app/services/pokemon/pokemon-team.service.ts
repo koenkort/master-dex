@@ -33,7 +33,7 @@ export class PokemonTeamService {
   }
 
   getCaughtPokemon (): Pokemon[] {
-    return JSON.parse(localStorage.getItem('caughtPokemons'));
+    return JSON.parse(localStorage.getItem('caughtPokemons')) || [];
   }
 
   constructor() { }
