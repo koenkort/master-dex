@@ -9,7 +9,9 @@ import { PokemonTeamService } from 'src/app/services/pokemon/pokemon-team.servic
 })
 export class CardComponent implements OnInit {
   @Input() pokemon: Pokemon;
+  @Output() picked: EventEmitter<Pokemon> = new EventEmitter();
   caught: boolean = false;
+  memory: number;
 
   constructor(private teamService: PokemonTeamService) { }
 
@@ -23,6 +25,10 @@ export class CardComponent implements OnInit {
       }
     }
 
+  }
+
+  getSelectedPokemon(pokemon: Pokemon) {
+    this.picked.emit(pokemon);
   }
 
   caughtCheck(pokemon: Pokemon): void {
