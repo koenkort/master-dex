@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
+import { PokemonTeamService } from 'src/app/services/pokemon/pokemon-team.service';
 
 @Component({
   selector: 'app-pokemon-details',
@@ -10,11 +11,11 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 
 
 export class PokemonDetailsComponent implements OnInit {
-  cardComponent = new CardComponent();
+  cardComponent: CardComponent;
   @Output() toggleModel: EventEmitter<Boolean> = new EventEmitter();
   @Input() pokemon:Pokemon;
 
-  constructor() { }
+  constructor(private teamService: PokemonTeamService) { this.cardComponent = new CardComponent(teamService) }
 
   ngOnInit() {
   }

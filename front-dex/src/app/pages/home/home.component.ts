@@ -12,8 +12,6 @@ import {
 } from '@angular/animations';
 import { Generation } from 'src/app/models/interfaces/Generation';
 
-import { Subscriber } from 'rxjs';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -32,14 +30,16 @@ import { Subscriber } from 'rxjs';
 })
 
 export class HomeComponent implements OnInit {
-  pokemons: Pokemon[];
+  pokemons: Pokemon[] = [];
   chosenPokemon: Pokemon;
   showModel: boolean = false;
   activePokemonId: number | undefined;
   activePokemon: Pokemon | undefined;
   types: Type = {count: 0, results: []};
   generations: Generation = {count: 0, results: []};
-  constructor(private PokemonService: PokemonService, private TypeService: TypeService, private GenerationService: GenerationService) {
+  constructor(private PokemonService: PokemonService,
+              private TypeService: TypeService,
+              private GenerationService: GenerationService) {
   }
 
   closeModel(): void {

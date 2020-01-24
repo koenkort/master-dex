@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import Pokemon from 'src/app/models/interfaces/Pokemon';
+import { PokemonTeamService } from 'src/app/services/pokemon/pokemon-team.service';
 
 @Component({
   selector: 'app-card',
@@ -9,11 +10,21 @@ import Pokemon from 'src/app/models/interfaces/Pokemon';
 export class CardComponent implements OnInit {
   @Input() pokemon: Pokemon;
   @Output() picked: EventEmitter<Pokemon> = new EventEmitter();
+  caught: boolean = false;
   memory: number;
 
-  constructor() { }
+  constructor(private teamService: PokemonTeamService) { }
 
   ngOnInit() {
+    let savedPokemons = this.teamService.getCaughtPokemon();
+    for(let i = 0; i < savedPokemons.length; i++) {
+      if(savedPokemons[i].id === this.pokemon.id) {
+        this.caught = true;
+        this.pokemon.is_caught = !this.pokemon.is_caught;
+        break;
+      }
+    }
+
   }
 
   getSelectedPokemon(pokemon: Pokemon) {
@@ -22,6 +33,7 @@ export class CardComponent implements OnInit {
 
   caughtCheck(pokemon: Pokemon): void {
     pokemon.is_caught = !pokemon.is_caught;
+    this.teamService.caughtPokemon(pokemon);
   }
 
   setBackgroundColor(types, name, type=true): string{

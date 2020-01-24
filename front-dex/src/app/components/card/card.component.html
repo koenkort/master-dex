@@ -1,9 +1,12 @@
 <article class="pokecard" [ngClass]="setBackgroundColor(pokemon.types, 'pokecard')">
     <section class="pokecard__header">
         <div class="pokecard__options">
-            <app-caught class="pokecard__option-spacing" (click)="caughtCheck(pokemon)"></app-caught>
+            <app-favourite></app-favourite>
+            <app-caught class="pokecard__option-spacing"
+                [caught]="caught"
+                (click)="caughtCheck(pokemon)">
+            </app-caught>
         </div>
-
         <div class="pokecard__types">
             <div class="pokecard__type" *ngIf="pokemon?.types[1]" [ngClass]="setBackgroundColor(pokemon?.types[1].type.name, 'pokecard__type', false)">{{ pokemon?.types[1].type.name }}</div>
             <div class="pokecard__type" *ngIf="pokemon?.types[0]" [ngClass]="setBackgroundColor(pokemon?.types[0].type.name, 'pokecard__type', false)"> {{ pokemon?.types[0].type.name }}</div>

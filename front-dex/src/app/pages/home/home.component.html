@@ -1,4 +1,4 @@
-<div class="home-container">
+<main class="home-container">
     <section class="toolbar">
         <input class="toolbar__search" type="text" placeholder="Search Pokémon" [(ngModel)]="searchTerm">
         <select class="toolbar__dropdown" [(ngModel)]="type">
@@ -26,7 +26,7 @@
             (picked)="closeModel(); openModel($event)">
         </app-card>
     </div>
-</div>
+</main>
 <app-pokemon-details *ngIf="activePokemon"
                      [pokemon]="activePokemon"
                      (toggleModel)="closeModel()"
